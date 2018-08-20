@@ -29,3 +29,6 @@ Thumbs.db
 
 # lock files
 yarn.lock
+
+# Webpack Config
+webpack.config.js

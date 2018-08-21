@@ -130,7 +130,6 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   * Extend a prototype. By default extends
   * the Array prototype
   * 
-  * @param {String} name 
   * @param {Function} fn 
   * @param {Object} proto 
   * 
@@ -140,8 +139,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
   _exports.throws = throws;
 
-  var extend = function extend(name, fn) {
-    var proto = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : arrayProto;
+  var extend = function extend(fn) {
+    var proto = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : arrayProto;
+    var name = fn.name;
 
     if (proto[name]) {
       return;
@@ -167,13 +167,13 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 })(this, function (_utils, _foreachAsync, _everyAsync, _someAsync, _filterAsync, _findAsync, _findIndexAsync, _mapAsync) {
   "use strict";
 
-  (0, _utils.extend)('forEachAsync', _foreachAsync.forEachAsync);
-  (0, _utils.extend)('everyAsync', _everyAsync.everyAsync);
-  (0, _utils.extend)('someAsync', _someAsync.someAsync);
-  (0, _utils.extend)('filterAsync', _filterAsync.filterAsync);
-  (0, _utils.extend)('findAsync', _findAsync.findAsync);
-  (0, _utils.extend)('findIndexAsync', _findIndexAsync.findIndexAsync);
-  (0, _utils.extend)('mapAsync', _mapAsync.mapAsync);
+  (0, _utils.extend)(_foreachAsync.forEachAsync);
+  (0, _utils.extend)(_everyAsync.everyAsync);
+  (0, _utils.extend)(_someAsync.someAsync);
+  (0, _utils.extend)(_filterAsync.filterAsync);
+  (0, _utils.extend)(_findAsync.findAsync);
+  (0, _utils.extend)(_findIndexAsync.findIndexAsync);
+  (0, _utils.extend)(_mapAsync.mapAsync);
 });
 
 /***/ }),

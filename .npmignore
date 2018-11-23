@@ -30,5 +30,11 @@ Thumbs.db
 # lock files
 yarn.lock
 
-# Webpack Config
+# Prettier
+.prettierrc
+.prettierignore
+
+# Config files
+.babelrc
+renovate.json
 webpack.config.js

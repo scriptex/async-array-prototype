@@ -12,7 +12,39 @@ This repository contains the asynchronous version of most array methods in JavaS
 
 ## Usage
 
-`// Todo`
+First install or [download](https://github.com/scriptex/async-array/archive/master.zip) this repository.
+
+```sh
+# Later we might have a name for the package
+
+npm i https://github.com/scriptex/async-array
+
+# or
+
+yarn add https://github.com/scriptex/async-array
+```
+
+Then either import the whole package or include a new script tag with `src` pointing to your downloaded and extracted repository.
+
+```javascript
+import 'async-array';
+```
+
+Once imported, the asyncronous methods are available on the `Array.prototype` and you can use them with any array.
+
+## Methods:
+
+1. Async `every`
+2. Async `filter`
+3. Async `find`
+4. Async `findIndex`
+5. Async `forEach`
+6. Async `map`
+7. Async `some`
+
+## TODO
+
+1. Async `reduce`
 
 ## LICENSE
 

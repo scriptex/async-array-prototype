@@ -1,8 +1,8 @@
-[![GitHub issues](https://img.shields.io/github/issues/scriptex/async-array.svg)](https://github.com/scriptex/async-array/issues)
-[![GitHub last commit](https://img.shields.io/github/last-commit/scriptex/async-array.svg)](https://github.com/scriptex/async-array/commits/master)
-[![Build Status](https://travis-ci.org/scriptex/async-array.svg?branch=master)](https://travis-ci.org/scriptex/async-array)
-[![Analytics](https://ga-beacon.appspot.com/UA-83446952-1/github.com/scriptex/async-array/README.md)](https://github.com/scriptex/async-array/)
-[![Greenkeeper badge](https://badges.greenkeeper.io/scriptex/async-array.svg)](https://greenkeeper.io/)
+[![GitHub issues](https://img.shields.io/github/issues/scriptex/async-array-prototype.svg)](https://github.com/scriptex/async-array-prototype/issues)
+[![GitHub last commit](https://img.shields.io/github/last-commit/scriptex/async-array-prototype.svg)](https://github.com/scriptex/async-array-prototype/commits/master)
+[![Build Status](https://travis-ci.org/scriptex/async-array-prototype.svg?branch=master)](https://travis-ci.org/scriptex/async-array-prototype)
+[![Analytics](https://ga-beacon.appspot.com/UA-83446952-1/github.com/scriptex/async-array-prototype/README.md)](https://github.com/scriptex/async-array-prototype/)
+[![Greenkeeper badge](https://badges.greenkeeper.io/scriptex/async-array-prototype.svg)](https://greenkeeper.io/)
 
 # Async Array Methods
 
@@ -15,13 +15,11 @@ This repository contains the asynchronous version of most array methods in JavaS
 First install or [download](https://github.com/scriptex/async-array/archive/master.zip) this repository.
 
 ```sh
-# Later we might have a name for the package
-
-npm i https://github.com/scriptex/async-array
+npm i async-array-prototype
 
 # or
 
-yarn add https://github.com/scriptex/async-array
+yarn add async-array-prototype
 ```
 
 Then either import the whole package or include a new script tag with `src` pointing to your downloaded and extracted repository.
@@ -41,10 +39,12 @@ Once imported, the asyncronous methods are available on the `Array.prototype` an
 5. Async `forEach`
 6. Async `map`
 7. Async `some`
+8. Async `reduce`
 
-## TODO
+## ES Next
 
-1. Async `reduce`
+Of course you can live on the edge and use the raw ES7 version of the methods by importing them from the `lib` folder.
+This way you will not extend the array prototype and the actual usage is left to you.
 
 ## LICENSE
 

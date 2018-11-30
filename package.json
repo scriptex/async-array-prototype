@@ -1,6 +1,6 @@
 {
-  "name": "async-array",
-  "version": "0.0.1",
+  "name": "async-array-prototype",
+  "version": "0.1.0",
   "description": "Async Array methods in JavaScript",
   "keywords": [
     "async",
@@ -10,9 +10,9 @@
   "scripts": {
     "build": "webpack"
   },
-  "repository": "git@github.com:scriptex/async-array.git",
+  "repository": "git@github.com:scriptex/async-array-prototype.git",
   "bugs": {
-    "url": "https://github.com/scriptex/async-array/issues",
+    "url": "https://github.com/scriptex/async-array-prototype/issues",
     "email": "scriptex.bg@gmail.com"
   },
   "author": "Atanas Atanasov <scriptex.bg@gmail.com> (https://atanas.info)",

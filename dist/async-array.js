@@ -104,18 +104,18 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   _exports.extend = _exports.throws = void 0;
 
   /**
-  * Save a reference to Array's prototype
-  */
+   * Save a reference to Array's prototype
+   */
   var arrayProto = Array.prototype;
   /**
-  * Check if arguments match requirements
-  * and if not, throw errors
-  * 
-  * @param {Object|undefined} thisArg 
-  * @param {Function} fn 
-  * 
-  * @returns {Void}
-  */
+   * Check if arguments match requirements
+   * and if not, throw errors
+   *
+   * @param {Object|undefined} thisArg
+   * @param {Function} fn
+   *
+   * @returns {Void}
+   */
 
   var throws = function throws(thisArg, fn) {
     if (thisArg === null) {
@@ -127,14 +127,14 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     }
   };
   /**
-  * Extend a prototype. By default extends
-  * the Array prototype
-  * 
-  * @param {Function} fn 
-  * @param {Object} proto 
-  * 
-  * @returns {Void}
-  */
+   * Extend a prototype. By default extends
+   * the Array prototype
+   *
+   * @param {Function} fn
+   * @param {Object} proto
+   *
+   * @returns {Void}
+   */
 
 
   _exports.throws = throws;
@@ -159,12 +159,12 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(0), __webpack_require__(2), __webpack_require__(3), __webpack_require__(8), __webpack_require__(5), __webpack_require__(6), __webpack_require__(7), __webpack_require__(4)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(0), __webpack_require__(2), __webpack_require__(3), __webpack_require__(4), __webpack_require__(5), __webpack_require__(6), __webpack_require__(7), __webpack_require__(8), __webpack_require__(9)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
   } else { var mod; }
-})(this, function (_utils, _foreachAsync, _everyAsync, _someAsync, _filterAsync, _findAsync, _findIndexAsync, _mapAsync) {
+})(this, function (_utils, _foreachAsync, _everyAsync, _someAsync, _filterAsync, _findAsync, _findIndexAsync, _mapAsync, _reduceAsync) {
   "use strict";
 
   (0, _utils.extend)(_foreachAsync.forEachAsync);
@@ -174,6 +174,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   (0, _utils.extend)(_findAsync.findAsync);
   (0, _utils.extend)(_findIndexAsync.findIndexAsync);
   (0, _utils.extend)(_mapAsync.mapAsync);
+  (0, _utils.extend)(_reduceAsync.reduceAsync);
 });
 
 /***/ }),
@@ -354,55 +355,64 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   Object.defineProperty(_exports, "__esModule", {
     value: true
   });
-  _exports.mapAsync = void 0;
+  _exports.someAsync = void 0;
 
   function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
   function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
-  var mapAsync =
+  var someAsync =
   /*#__PURE__*/
   function () {
     var _ref = _asyncToGenerator(
     /*#__PURE__*/
     regeneratorRuntime.mark(function _callee(fn, thisArg) {
-      var O, len, A, i;
+      var t, len, i;
       return regeneratorRuntime.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
               (0, _utils.throws)(this, fn);
-              O = Object(this);
-              len = O.length;
-              A = new Array(len);
+              t = Object(this);
+              len = t.length;
               i = 0;
 
-            case 5:
+            case 4:
               if (!(i < len)) {
-                _context.next = 13;
+                _context.next = 15;
                 break;
               }
 
-              if (!(i in O)) {
+              _context.t0 = i in t;
+
+              if (!_context.t0) {
                 _context.next = 10;
                 break;
               }
 
               _context.next = 9;
-              return fn.call(thisArg, O[i], i, O);
+              return fn.call(thisArg, t[i], i, t);
 
             case 9:
-              A[i] = _context.sent;
+              _context.t0 = _context.sent;
 
             case 10:
+              if (!_context.t0) {
+                _context.next = 12;
+                break;
+              }
+
+              return _context.abrupt("return", true);
+
+            case 12:
               i++;
-              _context.next = 5;
+              _context.next = 4;
               break;
 
-            case 13:
-              return _context.abrupt("return", A);
+            case 15:
+              return _context.abrupt("return", false);
 
-            case 14:
+            case 16:
             case "end":
               return _context.stop();
           }
@@ -410,12 +420,12 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       }, _callee, this);
     }));
 
-    return function mapAsync(_x, _x2) {
+    return function someAsync(_x, _x2) {
       return _ref.apply(this, arguments);
     };
   }();
 
-  _exports.mapAsync = mapAsync;
+  _exports.someAsync = someAsync;
 });
 
 /***/ }),
@@ -683,64 +693,55 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   Object.defineProperty(_exports, "__esModule", {
     value: true
   });
-  _exports.someAsync = void 0;
+  _exports.mapAsync = void 0;
 
   function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
   function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
-  var someAsync =
+  var mapAsync =
   /*#__PURE__*/
   function () {
     var _ref = _asyncToGenerator(
     /*#__PURE__*/
     regeneratorRuntime.mark(function _callee(fn, thisArg) {
-      var t, len, i;
+      var O, len, A, i;
       return regeneratorRuntime.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
               (0, _utils.throws)(this, fn);
-              t = Object(this);
-              len = t.length;
+              O = Object(this);
+              len = O.length;
+              A = new Array(len);
               i = 0;
 
-            case 4:
+            case 5:
               if (!(i < len)) {
-                _context.next = 15;
+                _context.next = 13;
                 break;
               }
 
-              _context.t0 = i in t;
-
-              if (!_context.t0) {
+              if (!(i in O)) {
                 _context.next = 10;
                 break;
               }
 
               _context.next = 9;
-              return fn.call(thisArg, t[i], i, t);
+              return fn.call(thisArg, O[i], i, O);
 
             case 9:
-              _context.t0 = _context.sent;
+              A[i] = _context.sent;
 
             case 10:
-              if (!_context.t0) {
-                _context.next = 12;
-                break;
-              }
-
-              return _context.abrupt("return", true);
-
-            case 12:
               i++;
-              _context.next = 4;
+              _context.next = 5;
               break;
 
-            case 15:
-              return _context.abrupt("return", false);
+            case 13:
+              return _context.abrupt("return", A);
 
-            case 16:
+            case 14:
             case "end":
               return _context.stop();
           }
@@ -748,12 +749,127 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       }, _callee, this);
     }));
 
-    return function someAsync(_x, _x2) {
+    return function mapAsync(_x, _x2) {
       return _ref.apply(this, arguments);
     };
   }();
 
-  _exports.someAsync = someAsync;
+  _exports.mapAsync = mapAsync;
+});
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+  if (true) {
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else { var mod; }
+})(this, function (_exports, _utils) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.reduceAsync = void 0;
+
+  function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+  function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+  var reduceAsync =
+  /*#__PURE__*/
+  function () {
+    var _ref = _asyncToGenerator(
+    /*#__PURE__*/
+    regeneratorRuntime.mark(function _callee(fn, accumulator, thisArg) {
+      var O, result, _iteratorNormalCompletion, _didIteratorError, _iteratorError, _iterator, _step;
+
+      return regeneratorRuntime.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              (0, _utils.throws)(this, fn);
+              O = Object(this);
+              result = accumulator;
+              _iteratorNormalCompletion = true;
+              _didIteratorError = false;
+              _iteratorError = undefined;
+              _context.prev = 6;
+              _iterator = O[Symbol.iterator]();
+
+            case 8:
+              if (_iteratorNormalCompletion = (_step = _iterator.next()).done) {
+                _context.next = 16;
+                break;
+              }
+
+              value = _step.value;
+              _context.next = 12;
+              return fn.call(thisArg, accumulator, value);
+
+            case 12:
+              result = _context.sent;
+
+            case 13:
+              _iteratorNormalCompletion = true;
+              _context.next = 8;
+              break;
+
+            case 16:
+              _context.next = 22;
+              break;
+
+            case 18:
+              _context.prev = 18;
+              _context.t0 = _context["catch"](6);
+              _didIteratorError = true;
+              _iteratorError = _context.t0;
+
+            case 22:
+              _context.prev = 22;
+              _context.prev = 23;
+
+              if (!_iteratorNormalCompletion && _iterator.return != null) {
+                _iterator.return();
+              }
+
+            case 25:
+              _context.prev = 25;
+
+              if (!_didIteratorError) {
+                _context.next = 28;
+                break;
+              }
+
+              throw _iteratorError;
+
+            case 28:
+              return _context.finish(25);
+
+            case 29:
+              return _context.finish(22);
+
+            case 30:
+              return _context.abrupt("return", result);
+
+            case 31:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee, this, [[6, 18, 22, 30], [23,, 25, 29]]);
+    }));
+
+    return function reduceAsync(_x, _x2, _x3) {
+      return _ref.apply(this, arguments);
+    };
+  }();
+
+  _exports.reduceAsync = reduceAsync;
 });
 
 /***/ })

@@ -1,6 +1,9 @@
+[![GitHub release](https://img.shields.io/github/release/scriptex/async-array-prototype.svg)](https://github.com/scriptex/async-array-prototype/releases/latest)
 [![GitHub issues](https://img.shields.io/github/issues/scriptex/async-array-prototype.svg)](https://github.com/scriptex/async-array-prototype/issues)
 [![GitHub last commit](https://img.shields.io/github/last-commit/scriptex/async-array-prototype.svg)](https://github.com/scriptex/async-array-prototype/commits/master)
 [![Build Status](https://travis-ci.org/scriptex/async-array-prototype.svg?branch=master)](https://travis-ci.org/scriptex/async-array-prototype)
+[![npm](https://img.shields.io/npm/dt/async-array-prototype.svg)](https://www.npmjs.com/package/async-array-prototype)
+[![npm](https://img.shields.io/npm/v/async-array-prototype.svg)](https://www.npmjs.com/package/async-array-prototype)
 [![Analytics](https://ga-beacon.appspot.com/UA-83446952-1/github.com/scriptex/async-array-prototype/README.md)](https://github.com/scriptex/async-array-prototype/)
 [![Greenkeeper badge](https://badges.greenkeeper.io/scriptex/async-array-prototype.svg)](https://greenkeeper.io/)
 

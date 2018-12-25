@@ -5,7 +5,6 @@
 [![npm](https://img.shields.io/npm/dt/async-array-prototype.svg)](https://www.npmjs.com/package/async-array-prototype)
 [![npm](https://img.shields.io/npm/v/async-array-prototype.svg)](https://www.npmjs.com/package/async-array-prototype)
 [![Analytics](https://ga-beacon.appspot.com/UA-83446952-1/github.com/scriptex/async-array-prototype/README.md)](https://github.com/scriptex/async-array-prototype/)
-[![Greenkeeper badge](https://badges.greenkeeper.io/scriptex/async-array-prototype.svg)](https://greenkeeper.io/)
 
 # Async Array Methods
 

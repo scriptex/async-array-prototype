@@ -26,6 +26,14 @@ yarn add async-array-prototype
 
 Then either import the whole package or include a new script tag with `src` pointing to your downloaded and extracted repository.
 
+You can also include the whole package from unpkg.com
+
+```html
+<script src="https://unpkg.com/async-array-prototype"></script>
+```
+
+Then 
+
 ```javascript
 import 'async-array';
 ```

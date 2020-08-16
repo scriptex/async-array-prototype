@@ -56,7 +56,6 @@ Once imported, the asyncronous methods are available on the `Array.prototype` an
 Of course you can live on the edge and use the raw ES7 version of the methods by importing them from the `lib` folder.
 This way you will not extend the array prototype and the actual usage is left to you.
 
-
 ## Support this project
 
 [![Tweet](https://img.shields.io/badge/Tweet-Share_this_repository-blue.svg?style=flat-square&logo=twitter&color=38A1F3)](https://twitter.com/intent/tweet?text=Checkout%20this%20awesome%20software%20project%3A&url=https%3A%2F%2Fgithub.com%2Fscriptex%2Fasync-array-prototype&via=scriptexbg&hashtags=software%2Cgithub%2Ccode%2Cawesome)

@@ -18,9 +18,9 @@
 	"author": "Atanas Atanasov <scriptex.bg@gmail.com> (https://atanas.info)",
 	"license": "MIT",
 	"devDependencies": {
-		"@babel/cli": "7.12.8",
-		"@babel/core": "7.12.9",
-		"@babel/preset-env": "7.12.7",
+		"@babel/cli": "7.12.10",
+		"@babel/core": "7.12.10",
+		"@babel/preset-env": "7.12.10",
 		"babel-loader": "8.2.2",
 		"unminified-webpack-plugin": "2.0.0",
 		"webpack": "5.1.0",

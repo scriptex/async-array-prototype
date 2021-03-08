@@ -1,10 +1,8 @@
-const UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
-
-module.exports = {
-	mode: 'production',
+module.exports = ['development', 'production'].map(mode => ({
+	mode,
 	entry: './lib/index.js',
 	output: {
-		filename: 'async-array.min.js'
+		filename: mode === 'production' ? 'index.min.js' : 'index.js'
 	},
 	module: {
 		rules: [
@@ -14,5 +12,5 @@ module.exports = {
 			}
 		]
 	},
-	plugins: [new UnminifiedWebpackPlugin()]
-};
+	devtool: false
+}));

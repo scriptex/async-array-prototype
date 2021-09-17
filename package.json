@@ -19,7 +19,7 @@
 	"author": "Atanas Atanasov <scriptex.bg@gmail.com> (https://atanas.info)",
 	"license": "MIT",
 	"devDependencies": {
-		"@babel/cli": "7.15.4",
+		"@babel/cli": "7.15.7",
 		"@babel/core": "7.15.5",
 		"@babel/preset-env": "7.15.6",
 		"babel-loader": "8.2.2",

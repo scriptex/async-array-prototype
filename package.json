@@ -1,13 +1,13 @@
 {
 	"name": "async-array-prototype",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"description": "Async array methods in JavaScript",
 	"keywords": [
 		"Array Methods",
 		"Async Programming",
 		"Async Array Methods"
 	],
-	"homepage": "https://atanas.info/projects/async-array-prototype.html",
+	"homepage": "https://atanas.info/portfolio/open-source/async-array-prototype",
 	"bugs": {
 		"url": "https://github.com/scriptex/async-array-prototype/issues",
 		"email": "hi@atanas.info"

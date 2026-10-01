@@ -25,11 +25,11 @@
 	},
 	"dependencies": {},
 	"devDependencies": {
-		"@babel/cli": "8.0.5",
-		"@babel/core": "8.0.5",
-		"@babel/preset-env": "8.0.5",
+		"@babel/cli": "8.0.6",
+		"@babel/core": "8.0.6",
+		"@babel/preset-env": "8.0.6",
 		"babel-loader": "10.1.1",
-		"webpack": "5.111.0",
+		"webpack": "5.111.1",
 		"webpack-cli": "7.2.3"
 	}
 }
